@@ -15,6 +15,10 @@ Benchmark files for [MPM code](https://github.com/cb-geo/mpm)
 
 * [Plate with hole (isoparametric)](https://github.com/cb-geo/mpm-benchmarks/tree/develop/2d/plate_with_hole/isoparametric)
 
+* [Consolidation](https://github.com/yfun0815/mpm-benchmarks/tree/develop/2d/consolidation)
+
+* [Liquefaction](https://github.com/yfun0815/mpm-benchmarks/tree/develop/2d/Liqufication)
+
 ## 3D
 
 * [Uniaxial stress test](https://github.com/cb-geo/mpm-benchmarks/tree/develop/3d/uniaxial_stress)
@@ -24,3 +28,5 @@ Benchmark files for [MPM code](https://github.com/cb-geo/mpm)
 * [Hydrostatic column](https://github.com/cb-geo/mpm-benchmarks/tree/develop/3d/hydrostatic_column)
 
 * [Dam break](https://github.com/cb-geo/mpm-benchmarks/tree/develop/3d/dam-break)
+
+* [Consolidation](https://github.com/yfun0815/mpm-benchmarks/tree/develop/3d/consolidation)
