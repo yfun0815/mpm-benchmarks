@@ -17,7 +17,7 @@ Benchmark files for [MPM code](https://github.com/cb-geo/mpm)
 
 * [Consolidation](https://github.com/yfun0815/mpm-benchmarks/tree/develop/2d/consolidation)
 
-* [Liquefaction](https://github.com/yfun0815/mpm-benchmarks/tree/develop/2d/Liqufication)
+* [Liquefaction](https://github.com/yfun0815/mpm-benchmarks/tree/develop/2d/Liquefaction)
 
 ## 3D
 
