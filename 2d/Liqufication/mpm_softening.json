@@ -1,0 +1,279 @@
+{
+	"title": "Mochikoshi Test MC_2",
+	"mesh": {
+		"mesh": "mesh.txt",
+		"entity_sets": "entity_sets.json",
+		"cell_type": "ED2Q16G",			
+		"isoparametric": false,			
+		"io_type": "Ascii2D",
+		"node_type": "N2D",
+		"boundary_conditions": {
+			"velocity_constraints": [
+				{
+					"nset_id": 0,
+					"dir": 0,
+					"velocity": 0.0
+				},
+				{
+					"nset_id": 1,
+					"dir": 0,
+					"velocity": 0.0
+				},
+				{
+					"nset_id": 2,
+					"dir": 1,
+					"velocity": 0.0
+				},
+        {
+					"nset_id": 3,
+					"dir": 1,
+					"velocity": 0.0
+				}
+			],
+      "friction_constraints": [
+				{
+					"nset_id": 2,
+					"dir": 1,
+					"sign_n": -1,
+					"friction": 0.70
+				},
+				{
+					"nset_id": 3,
+					"dir": 1,
+					"sign_n": -1,
+					"friction": 0.35
+				}
+			]
+		}
+   },
+   "particles": [
+		{
+			"generator": {
+				"check_duplicates": true,
+				"location": "particles.txt",
+				"pset_id": 0,
+				"io_type": "Ascii2D",
+				"particle_type": "P2D",
+				"material_id": 1,
+				"type": "file"
+			}
+		}
+	],
+	"materials": [
+		{
+			"id": 166,
+			"type": "MohrCoulomb2D",
+			"density": 1690.0,
+			"poisson_ratio": 0.492,
+			"youngs_modulus": 142E6,
+			"softening": true,
+			"friction": 35,
+			"dilation": 0,
+			"cohesion": 25000,
+			"residual_friction": 20,
+			"residual_dilation": 0,
+			"residual_cohesion": 1000,
+			"peak_pdstrain": 0.01,
+			"residual_pdstrain": 0.05,
+			"tension_cutoff": 1000
+		},
+		{
+			"id": 167,
+			"type": "MohrCoulomb2D",
+			"density": 1690.0,
+			"poisson_ratio": 0.3,
+			"youngs_modulus": 124E6,
+			"softening": true,
+			"friction": 35,
+			"dilation": 0,
+			"cohesion": 25000,
+			"residual_friction": 20,
+			"residual_dilation": 0,
+			"residual_cohesion": 1000,
+			"peak_pdstrain": 0.01,
+			"residual_pdstrain": 0.05,
+			"tension_cutoff": 1000
+		},
+		{
+			"id": 168,
+			"type": "MohrCoulomb2D",
+			"density": 1870.0,
+			"poisson_ratio": 0.495,
+			"youngs_modulus": 120E6,
+			"softening": true,
+			"friction": 30,
+			"dilation": 0,
+			"cohesion": 1000,
+			"residual_friction": 0,
+			"residual_dilation": 0,
+			"residual_cohesion": 5000,
+			"peak_pdstrain": 0.1,
+			"residual_pdstrain": 1,
+			"tension_cutoff": 1000
+		},
+		{
+			"id": 170,
+			"density": 1900.0,
+			"poisson_ratio": 0.491,
+			"type": "LinearElastic2D",
+			"youngs_modulus": 316E6
+		},
+		{
+			"id": 169,
+			"type": "MohrCoulomb2D",
+			"density": 1870.0,
+			"poisson_ratio": 0.495,
+			"youngs_modulus": 258E6,
+			"softening": true,
+			"friction": 0,
+			"dilation": 0,
+			"cohesion": 12000,
+			"residual_friction": 0,
+			"residual_dilation": 0,
+			"residual_cohesion": 6000,
+			"peak_pdstrain": 0.001,
+			"residual_pdstrain": 1,
+			"tension_cutoff": 1000
+		},
+		{
+			"id": 171,
+			"type": "MohrCoulomb2D",
+			"density": 1870.0,
+			"poisson_ratio": 0.495,
+			"youngs_modulus": 237E6,
+			"softening": true,
+			"friction": 0,
+			"dilation": 0,
+			"cohesion": 11500,
+			"residual_friction": 0,
+			"residual_dilation": 0,
+			"residual_cohesion": 5750,
+			"peak_pdstrain": 0.001,
+			"residual_pdstrain": 1,
+			"tension_cutoff": 1000
+		},
+		{
+			"id": 172,
+			"type": "MohrCoulomb2D",
+			"density": 1870.0,
+			"poisson_ratio": 0.495,
+			"youngs_modulus": 215E6,
+			"softening": true,
+			"friction": 0,
+			"dilation": 0,
+			"cohesion": 10600,
+			"residual_friction": 0,
+			"residual_dilation": 0,
+			"residual_cohesion": 5300,
+			"peak_pdstrain": 0.001,
+			"residual_pdstrain": 1,
+			"tension_cutoff": 1000
+		},
+		{
+			"id": 173,
+			"type": "MohrCoulomb2D",
+			"density": 1870.0,
+			"poisson_ratio": 0.495,
+			"youngs_modulus": 189E6,
+			"softening": true,
+			"friction": 0,
+			"dilation": 0,
+			"cohesion": 9100,
+			"residual_friction": 0,
+			"residual_dilation": 0,
+			"residual_cohesion": 4050,
+			"peak_pdstrain": 0.001,
+			"residual_pdstrain": 1,
+			"tension_cutoff": 1000
+		},
+		{
+			"id": 174,
+			"type": "MohrCoulomb2D",
+			"density": 1870.0,
+			"poisson_ratio": 0.495,
+			"youngs_modulus": 160E6,
+			"softening": true,
+			"friction": 0,
+			"dilation": 0,
+			"cohesion": 7400,
+			"residual_friction": 0,
+			"residual_dilation": 0,
+			"residual_cohesion": 3700,
+			"peak_pdstrain": 0.001,
+			"residual_pdstrain": 1,
+			"tension_cutoff": 1000
+		},
+		{
+			"id": 175,
+			"type": "MohrCoulomb2D",
+			"density": 1870.0,
+			"poisson_ratio": 0.495,
+			"youngs_modulus": 124E6,
+			"softening": true,
+			"friction": 0,
+			"dilation": 0,
+			"cohesion": 5600,
+			"residual_friction": 0,
+			"residual_dilation": 0,
+			"residual_cohesion": 2800,
+			"peak_pdstrain": 0.001,
+			"residual_pdstrain": 1,
+			"tension_cutoff": 1000
+		},
+		{
+			"id": 176,
+			"type": "MohrCoulomb2D",
+			"density": 1870.0,
+			"poisson_ratio": 0.495,
+			"youngs_modulus": 72E6,
+			"softening": true,
+			"friction": 0,
+			"dilation": 0,
+			"cohesion": 3000,
+			"residual_friction": 0,
+			"residual_dilation": 0,
+			"residual_cohesion": 1500,
+			"peak_pdstrain": 0.001,
+			"residual_pdstrain": 1,
+			"tension_cutoff": 1000
+		}
+	],
+	"external_loading_conditions": {
+		"gravity": [0, -9.81]
+	},
+	"analysis": {
+		"type": "MPMExplicit2D",
+		"stress_update": "usl",
+		"dt": 0.00005,
+		"uuid": "sloperesults",
+		"nsteps": 2500000,
+		"nload_balance_steps": 500,
+		"velocity_update": false,
+		"cap_particles_vel": false,
+		"cap_particles_vel_thresh": 15,
+		"rem_particles_vel": true,
+		"rem_particles_vel_thresh": 20,
+		"damping": {
+			"type": "Cundall",
+			"damping_factor": 0.01
+		},
+		"locate_particles": false,
+		"resume": {
+			"resume": true,
+			"repartition": false,
+			"uuid": "sloperesults",
+			"step": 340000
+		}
+	},
+	"post_processing": {
+		"path": "results/",
+		"output_steps": 1000,
+		"vtk": ["stresses","velocities","displacements"],
+		"vtk_statevars": [
+			{
+				"phase_id": 0,
+				"statevars" : ["pdstrain"]
+			}
+		]
+	}
+} 
