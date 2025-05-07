@@ -12,6 +12,18 @@
 			"location": "particle-pore-pressure.txt"
 		},
 		"boundary_conditions": {
+			"pressure_constraints": [
+                {
+                    "nset_id": 1,
+                    "pressure": 2e4,
+                    "phase_id": 1
+                },
+				{
+                    "nset_id": 3,
+                    "pressure": 1e4,
+                    "phase_id": 1
+                }
+            ],
 			"velocity_constraints": [
 				{
 					"nset_id": 0,
@@ -25,6 +37,11 @@
 				},
 				{
 					"nset_id": 2,
+					"dir": 0,
+					"velocity": 0.00
+				},
+				{
+					"nset_id": 2,
 					"dir": 1,
 					"velocity": 0.00
 				},
@@ -32,11 +49,16 @@
 					"nset_id": 3,
 					"dir": 3,
 					"velocity": 0.00
-				}
-			],
-			"pore_pressure_constraints": [
+				},
 				{
-					"file": "pore-pressure-constraint.txt"
+					"nset_id": 4,
+					"dir": 3,
+					"velocity": 0.00
+				},
+				{
+					"nset_id": 4,
+					"dir": 1,
+					"velocity": 0.00
 				}
 			]
 		}
@@ -65,11 +87,11 @@
 			"density": 2600.0,
 			"poisson_ratio": 0.3,
 			"youngs_modulus": 9.80E+7,
-			"porosity": 0.3,
+			"porosity": 0.2,
 			"intrinsic_permeability": false,
-			"k_x": 0.001,
-			"k_y": 0.001,
-			"k_z": 0.001
+			"k_x": 0.00001,
+			"k_y": 0.00001,
+			"k_z": 0.00001
 		},
 		{
 			"id": 1,
@@ -84,13 +106,6 @@
 		"gravity": [
 			0.0,
 			0.0
-		],
-		"particle_surface_traction": [
-			{
-				"pset_id": 1,
-				"dir": 1,
-				"traction": -10000.0
-			}
 		]
 	},
 	"analysis": {
@@ -108,8 +123,12 @@
 			0.0,
 			0.0
 		],
-		"dt": 0.00001,
-		"nsteps": 20001,
+		"dt": 0.0001,
+		"nsteps": 2,
+		"damping": {
+            "type": "Cundall",
+            "damping_factor": 0.1
+        },
 		"resume": {
 			"resume": false,
 			"uuid": "consolidation_2d",
@@ -126,6 +145,6 @@
 				]
 			}
 		],
-		"output_steps": 100
+		"output_steps": 1
 	}
 }
