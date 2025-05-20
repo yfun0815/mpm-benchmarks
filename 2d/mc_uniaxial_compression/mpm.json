@@ -11,13 +11,18 @@
       "velocity_constraints": [
         {
           "nset_id": 0,
-          "dir": 0,
-          "velocity": 0.0
+          "dir": 1,
+          "velocity": -0.02
         },
         {
           "nset_id": 1,
+          "dir": 0,
+          "velocity": 0
+        },
+        {
+          "nset_id": 2,
           "dir": 1,
-          "velocity": -0.002
+          "velocity": 0
         }
       ]
     }
@@ -66,16 +71,20 @@
     "stress_update": "usf",
     "dt": 0.000001,
     "uuid": "UCT-2d-usf",
-    "nsteps": 5000,
-    "velocity_update": true,
+    "nsteps": 90000,
+    "velocity_update": false,
     "resume": {
-      "resume": false,
+      "resume": true,
       "uuid": "UCT-2d-usf",
-      "step": 5
+      "step": 10000
     }
   },
   "post_processing": {
     "path": "results/",
-    "output_steps": 10
-  }
+    "output_steps": 10000,
+    "vtk": ["displacements"]
+  },
+  "particles_treatment": {
+    "delete_particle_ids": [0, 1, 2, 3, 4, 5]
+}
 }
