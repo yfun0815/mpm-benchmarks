@@ -10,6 +10,8 @@ Benchmark files for [MPM code](https://github.com/cb-geo/mpm)
 * [Hydrostatic column](https://github.com/cb-geo/mpm-benchmarks/tree/develop/2d/hydrostatic_column)
 
 * [Sliding block on inclined boundary](https://github.com/cb-geo/mpm-benchmarks/tree/develop/2d/sliding_block_inclined_boundary)
+  
+* [Sliding block on inclined boundary_levelset](https://github.com/yfun0815/mpm-benchmarks/tree/develop/2d/sliding_block_inclined_boundary_levelset)
 
 * [Uniaxial traction](https://github.com/cb-geo/mpm-benchmarks/tree/develop/2d/uniaxial-traction)
 
